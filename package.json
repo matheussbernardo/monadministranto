@@ -1,0 +1,19 @@
+{
+  "name": "hello",
+  "esy": {
+    "buildsInSource": "_build",
+    "build": "dune build @all"
+  },
+  "scripts": {
+    "watch": "esy b dune build @run_hello_bc -w",
+    "start": "esy b dune exec ./Hello.exe"
+  },
+  "dependencies": {
+    "@opam/dune": "2.7.1",
+    "ocaml": "4.10.x"
+  },
+  "devDependencies": {
+    "@opam/ocaml-lsp-server": "*",
+    "esy-fswatch": "github:ulrikstrid/esy-fswatch:windows.json#7328e82b62c1691cd13623fffde0b66d0a0f9498"
+  }
+}
