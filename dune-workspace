@@ -1,0 +1,6 @@
+(lang dune 2.7)
+
+(env
+ (_
+  (env-vars
+   (TELEGRAM_BOT "your_bot_token"))))

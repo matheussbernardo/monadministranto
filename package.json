@@ -5,11 +5,15 @@
     "build": "dune build @all"
   },
   "scripts": {
-    "watch": "esy b dune build @run_hello_bc -w",
-    "start": "esy b dune exec ./Hello.exe"
+    "start": "esy b dune exec ./bin/Hello.exe"
   },
   "dependencies": {
+    "@opam/cohttp-lwt-unix-ssl": "3.0.0",
+    "@opam/core": "v0.14.0",
     "@opam/dune": "2.7.1",
+    "@opam/opium": "0.20.0",
+    "@opam/ppx_deriving_yojson": "3.6.1",
+    "@opam/yojson": "1.7.0",
     "ocaml": "4.10.x"
   },
   "devDependencies": {
