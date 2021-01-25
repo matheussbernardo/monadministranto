@@ -12,15 +12,14 @@ install: esy install
 script: 
 - esy test
 - esy build
-- ls ~/.esy
-- ls $cur__target_dir
-- zip -r latest $cur__target_dir/Hello.exe
+- zip latest _build/default/bin/Hello.exe
 - mkdir -p dpl_cd_upload
 - mv latest.zip dpl_cd_upload/latest.zip
 
 cache:
   directories:
   - $HOME/.esy/source/i
+  - $HOME/.esy/3___________________________________________________________________/i
 
 deploy:
 - provider: s3
