@@ -1,6 +1,7 @@
 dist: bionic
 language: node_js
-
+node_js:
+  - 14
 before_install:
 - npm i -g esy --prefix ~/.npm
 install: esy install
