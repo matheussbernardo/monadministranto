@@ -2,11 +2,20 @@ dist: bionic
 language: node_js
 node_js:
   - 14
+
 before_install:
 - sudo apt-get -y install libev-dev
 - npm i -g esy
+
 install: esy install
+
 script: esy build
+
+cache:
+  directories:
+  - $HOME/.esy/source/i
+  - $HOME/.esy/3_*
+
 addons:
   apt:
     update: true
