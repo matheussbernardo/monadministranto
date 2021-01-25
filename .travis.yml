@@ -2,6 +2,6 @@ dist: bionic
 language: node_js
 
 before_install:
-- npm install -g esy
+- npm install -g --unsafe-perm esy
 install: esy install
 script: esy build
