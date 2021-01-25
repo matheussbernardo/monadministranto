@@ -10,7 +10,6 @@ before_install:
 install: esy install
 
 script: 
-- esy test
 - esy build
 - zip latest _build/default/bin/Hello.exe
 - mkdir -p dpl_cd_upload
