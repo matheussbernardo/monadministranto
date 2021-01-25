@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /home/ubuntu/bot
+    destination: /home
 
 hooks:
   AfterInstall:
-    - location: bot/Hello.exe
+    - location: /home/Hello.exe
       timeout: 180
       runas: root
