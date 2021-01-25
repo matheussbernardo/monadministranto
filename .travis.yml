@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - 14
 before_install:
-- sudo apt-get -y install libev
+- sudo apt-get -y install libev-dev
 - npm i -g esy
 install: esy install
 script: esy build
