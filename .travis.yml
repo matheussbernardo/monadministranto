@@ -1,6 +1,5 @@
+dist: focal
 language: node_js
-node_js:
-  - 7
 
 before_install:
 - npm install -g esy
