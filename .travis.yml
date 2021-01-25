@@ -19,7 +19,7 @@ script:
 cache:
   directories:
   - $HOME/.esy/source/i
-  - $HOME/.esy/3_*
+  - $HOME/.esy/3_________________________________________________________
 
 deploy:
 - provider: s3
