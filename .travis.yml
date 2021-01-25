@@ -3,6 +3,6 @@ language: node_js
 node_js:
   - 14
 before_install:
-- npm i -g esy --prefix ~/.npm
+- npm i -g esy
 install: esy install
 script: esy build
