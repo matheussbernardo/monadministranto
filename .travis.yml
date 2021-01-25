@@ -4,5 +4,5 @@ node_js:
 
 before_install:
 - npm install -g esy
-install: est install
+install: esy install
 script: esy build
