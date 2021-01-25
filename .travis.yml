@@ -13,6 +13,7 @@ script:
 - esy test
 - esy build
 - ls ~/.esy
+- ls $cur__target_dir
 - zip -r latest $cur__target_dir/Hello.exe
 - mkdir -p dpl_cd_upload
 - mv latest.zip dpl_cd_upload/latest.zip
@@ -20,7 +21,6 @@ script:
 cache:
   directories:
   - $HOME/.esy/source/i
-  - $HOME/.esy/3_________________________________________________________
 
 deploy:
 - provider: s3
