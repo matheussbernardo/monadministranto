@@ -6,6 +6,6 @@ files:
 
 hooks:
   AfterInstall:
-    - location: /home/_build/default/bin/Hello.exe
+    - location: /_build/default/bin/Hello.exe
       timeout: 180
       runas: root
