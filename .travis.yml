@@ -11,7 +11,7 @@ install: esy install
 
 script: 
 - esy build
-- zip -r latest *
+- zip -r latest appspec.yml _build/default/bin/Hello.exe scripts
 - mkdir -p dpl_cd_upload
 - mv latest.zip dpl_cd_upload/latest.zip
 

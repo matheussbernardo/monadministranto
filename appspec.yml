@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /home
+    destination: /home/bot
 
 hooks:
-  AfterInstall:
-    - location: /_build/default/bin/Hello.exe
-      timeout: 180
+  BeforeInstall:
+    - location: scripts/start_server
+      timeout: 300
       runas: root
