@@ -1,4 +1,4 @@
 #!/bin/bash
 source ~/.bashrc
 source ~/.bash_profile
-./Hello.exe --host=localhost --port=8000
+TELEGRAM_BOT=$TELEGRAM_BOT ./Hello.exe --host=localhost --port=8000
