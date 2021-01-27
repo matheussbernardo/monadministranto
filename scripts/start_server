@@ -1,5 +1,0 @@
-#!/bin/bash
-source ~/.bashrc
-source ~/.bash_profile
-telegram_bot="$(env | grep TELEGRAM)"
-sudo nohup TELEGRAM_BOT=$telegram_bot ../bot/./Hello.exe --host=localhost --port=8000 &
