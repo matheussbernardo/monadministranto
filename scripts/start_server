@@ -1,2 +1,4 @@
 #!/bin/bash
+source ~/.bashrc
+source ~/.bash_profile
 ./Hello.exe --host=localhost --port=8000
