@@ -7,13 +7,12 @@ RUN opam install . --deps-only
 
 ADD . .
 RUN sudo chown -R opam:nogroup . && eval $(opam env) && dune build --build-dir /home/opam/build
-RUN ls -l /home/opam/build
 
 FROM alpine:3.13
 
 COPY --from=build /home/opam/build/default/bin/monadmin_bot.exe app.exe
 
-RUN sudo apk add --no-cache libev-dev m4 linux-headers
+RUN  apk add --no-cache libev-dev m4 linux-headers
 
 EXPOSE 3000
 CMD ./app.exe
