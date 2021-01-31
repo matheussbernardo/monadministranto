@@ -1,6 +1,11 @@
 (executable
- (name Hello)
- (libraries opium yojson core ppx_deriving_yojson.runtime cohttp-lwt-unix-ssl
-   telegram)
+ (name monadmin_bot)
+ (libraries
+  opium
+  yojson
+  core
+  ppx_deriving_yojson.runtime
+  cohttp-lwt-unix
+  telegram)
  (preprocess
   (pps ppx_deriving_yojson)))

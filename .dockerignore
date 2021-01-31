@@ -1,0 +1,9 @@
+_build
+_opam
+.git
+.merlin
+.vscode
+.gitignore
+.ocamlformat
+.travis.yml
+appspec.yml

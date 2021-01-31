@@ -1,6 +1,7 @@
 {
     "ocaml.sandbox": {
-        "kind": "esy",
-        "root": "${workspaceFolder:monadministranto}"
-    }
+        "kind": "opam",
+        "switch": "${workspaceFolder:monadministranto}"
+    },
+    "git.ignoreLimitWarning": true
 }
