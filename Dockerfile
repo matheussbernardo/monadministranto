@@ -12,7 +12,7 @@ FROM alpine:3.13
 
 COPY --from=build /home/opam/build/default/bin/monadmin_bot.exe app.exe
 
-RUN  apk add --no-cache libev-dev m4 linux-headers
+RUN  apk add --no-cache libev-dev m4 linux-headers gmp-dev perl
 
 CMD ./app.exe --port=$PORT --debug
 
