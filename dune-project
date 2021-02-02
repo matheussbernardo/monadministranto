@@ -36,9 +36,12 @@
    (>= 0.20.0))
   (yojson
    (>= 1.7.0))
-  (ppx_deriving_yojson
-   (>= 3.6.1))
   (cohttp-lwt-unix
    (>= 2.5.4))
+  (tls	
+   (>= 0.12.8))
   (logs
-   (>= 0.7.0))))
+   (>= 0.7.0))
+  (ppx_deriving_yojson
+   (>= 3.6.1))))
+  
