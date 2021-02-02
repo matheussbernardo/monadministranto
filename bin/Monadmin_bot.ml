@@ -14,12 +14,18 @@ let send_message chat_id text =
 
 let print_json req =
   let open Lwt.Syntax in
-  let+ json = Request.to_json_exn req in
+  let* json = Request.to_json_exn req in
 
   let update = json |> Telegram.Update.of_yojson |> Result.get_ok in
   Logs.info (fun m -> m "Received update: %s" update.message.text);
-  let _message = send_message update.message.chat.id "RECEBIDO" in
-  Response.of_json (`String "OK")
+  let* (resp, body) = send_message update.message.chat.id "RECEBIDO" in
+  let code = resp |> Cohttp_lwt.Response.status |> Cohttp.Code.code_of_status in
+  Logs.info (fun m -> m "Response code: %d\n" code);
+  Logs.info (fun m -> m "Headers: %s\n" (resp |> Cohttp_lwt.Response.headers |> Cohttp.Header.to_string));
+  let* body_str = body |> Cohttp_lwt.Body.to_string in
+  Logs.info (fun m -> m "Body of length: %d\n" (String.length body_str));
+
+  Lwt.return ( Response.of_json (`String "OK") )
 
 let app = App.empty |> App.post "/" print_json
 
