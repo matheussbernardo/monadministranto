@@ -1,6 +1,6 @@
 FROM ocaml/opam:alpine-3.13-ocaml-4.11 as build
 
-RUN sudo apk add --no-cache libev-dev m4 linux-headers
+RUN sudo apk add --no-cache libev-dev m4 linux-headers gmp-dev perl
 
 ADD monadmin_bot.opam .
 RUN opam install . --deps-only
